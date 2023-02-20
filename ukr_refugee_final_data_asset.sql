@@ -68,7 +68,7 @@ INSERT INTO joined_refugee_country
 		pop.[Population (2020)] AS Population, 
 		ROUND(Refugee.individuals / pop.[Population (2020)] * 100, 3) AS RefugeePct
 	FROM 
-		dup_UKR AS Refugee
+		UKR_refugee_by_countries$ AS Refugee
 	LEFT JOIN 
 		population_by_country_2020$ as pop
 		ON 
